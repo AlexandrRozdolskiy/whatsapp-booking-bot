@@ -197,8 +197,6 @@ GOOGLE_CALENDAR_TOKEN=token.pickle
 
 ### Component Architecture
 
-<img src="static/arch.png" alt="UI Screenshot #1" width="100%">
-
 ```mermaid
 graph TB
     subgraph "Frontend Layer"
