@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobBot - WhatsApp Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/whatsapp.css">
+    <link rel="stylesheet" href="/static/css/animations.css">
+</head>
+<body>
+    <div class="whatsapp-container">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="contact-info">
+                <img src="/static/images/jobbot-avatar.png" alt="JobBot" class="avatar">
+                <div class="contact-details">
+                    <h3>JobBot</h3>
+                    <span class="status">Online</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <i class="fas fa-video"></i>
+                <i class="fas fa-phone"></i>
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+        </div>
+
+        <!-- Chat Messages Area -->
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be dynamically inserted here -->
+        </div>
+
+        <!-- Typing Indicator -->
+        <div class="typing-indicator" id="typingIndicator" style="display: none;">
+            <div class="typing-animation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <span class="typing-text">JobBot is typing...</span>
+        </div>
+
+        <!-- Message Input -->
+        <div class="message-input-container">
+            <div class="input-wrapper">
+                <i class="fas fa-paperclip attachment-btn"></i>
+                <input type="text" id="messageInput" placeholder="Type a message..." autocomplete="off">
+                <button id="sendButton" class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Summary Modal -->
+    <div class="booking-modal" id="bookingModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Booking Summary</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body" id="bookingSummary">
+                <!-- Booking details will be populated here -->
+            </div>
+            <div class="modal-footer">
+                <button id="confirmBooking" class="btn btn-primary">Confirm Booking</button>
+                <button id="editBooking" class="btn btn-secondary">Edit Details</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="success-modal" id="successModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>✅ Booking Confirmed!</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body" id="successMessage">
+                <!-- Success message will be populated here -->
+            </div>
+            <div class="modal-footer">
+                <button id="newBooking" class="btn btn-primary">Start New Booking</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/api-client.js"></script>
+    <script src="/static/js/chat-ui.js"></script>
+    <script src="/static/js/booking-flow.js"></script>
+</body>
+</html> 

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobBot Demo - WhatsApp Booking Bot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            border-radius: 12px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .demo-button {
+            display: inline-block;
+            background: white;
+            color: #25D366;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: transform 0.2s;
+        }
+
+        .demo-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #25D366;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .feature-card p {
+            color: #666;
+        }
+
+        .tech-stack {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .tech-stack h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .tech-item {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .tech-item h4 {
+            color: #25D366;
+            margin-bottom: 10px;
+        }
+
+        .instructions {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .instructions h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .instructions ol {
+            padding-left: 20px;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .highlight {
+            background: #e8f5e8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #2e7d32;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 JobBot WhatsApp Booking Bot</h1>
+            <p>AI-powered booking assistant with WhatsApp-style interface</p>
+            <a href="/" class="demo-button">
+                <i class="fas fa-comments"></i> Try the Demo
+            </a>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <h3>WhatsApp-Style Interface</h3>
+                <p>Pixel-perfect WhatsApp Web replica with smooth animations, typing indicators, and familiar chat experience.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <h3>AI-Powered Conversations</h3>
+                <p>GPT-4 integration for natural language processing, context-aware responses, and intelligent conversation flow.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Zoho CRM Integration</h3>
+                <p>Complete booking workflow with contact creation, calendar events, task assignment, and job dossier generation.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Mobile Responsive</h3>
+                <p>Optimized for all devices with touch-friendly interface and adaptive layouts for mobile and desktop.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Real-time Processing</h3>
+                <p>FastAPI backend with async processing, real-time message delivery, and instant booking confirmations.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Production Ready</h3>
+                <p>Scalable architecture, comprehensive error handling, and ready for deployment to production environments.</p>
+            </div>
+        </div>
+
+        <div class="tech-stack">
+            <h2>Technology Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h4>Backend</h4>
+                    <p>FastAPI + Python 3.9+</p>
+                </div>
+                <div class="tech-item">
+                    <h4>AI Integration</h4>
+                    <p>OpenAI GPT-4 API</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Frontend</h4>
+                    <p>Vanilla JavaScript + CSS3</p>
+                </div>
+                <div class="tech-item">
+                    <h4>CRM</h4>
+                    <p>Zoho CRM Mock API</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Data Processing</h4>
+                    <p>Pandas + Pydantic</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Deployment</h4>
+                    <p>Uvicorn ASGI Server</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h2>How to Use the Demo</h2>
+            <ol>
+                <li><strong>Start a Conversation:</strong> Click "Try the Demo" to open the WhatsApp-style chat interface</li>
+                <li><strong>Choose Job Type:</strong> Select from Photography, Videography, Audio, or Other services</li>
+                <li><strong>Provide Details:</strong> Follow the conversation to provide job date, duration, location, and budget</li>
+                <li><strong>Contact Information:</strong> Enter your name, phone number, and email address</li>
+                <li><strong>Review & Confirm:</strong> Review the booking summary and confirm your booking</li>
+                <li><strong>CRM Integration:</strong> Watch as the system creates contacts, calendar events, and tasks in Zoho CRM</li>
+            </ol>
+
+            <p style="margin-top: 20px; padding: 15px; background: #fff3cd; border-radius: 8px; border-left: 4px solid #ffc107;">
+                <strong>Note:</strong> This is a proof-of-concept demo. The Zoho CRM integration is simulated with realistic delays and data generation. 
+                In production, this would connect to your actual Zoho CRM instance.
+            </p>
+        </div>
+    </div>
+</body>
+</html> 

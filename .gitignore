@@ -1,0 +1,14 @@
+token.pickle
+oauth-credentials.json
+.env
+impl-plan.md
+tech-stack.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+
+venv/
